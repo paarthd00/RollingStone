@@ -32,5 +32,3 @@
     Your site is now running at http://localhost:8000!
 
     Edit `src/pages/index.js` to see your site update in real-time!
-
-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
