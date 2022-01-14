@@ -9,16 +9,51 @@ const headerStyles = {
   color: "yellow",
   textAlign: "center",
   zIndex: "100",
-
+  margin: "auto",
+  width: "25vw"
+}
+const containerStyles = {
+  display: "flex",
+  width: "400vw", 
+  height: "100vh", 
+  background: "black", 
+  justifyContent: "center", 
+  flexFlow: "row",
+  scrollDirection: "horizontal"
 }
 // markup
 const IndexPage = () => {
   return (
-    <main style={{display: "flex", width: "100vw", height: "100vh", background: "black", justifyContent: "center", flexFlow: "column"}}>
-      <div style={{ backgroundPosition: "center", backgroundImage: `url(${Nwa})`, width: "100%", height: `85vh`, backgroundSize: `contain`, position: "absolute", backgroundRepeat: "no-repeat", margin: "auto"}}></div>
-      <header style={headerStyles}>
-      <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive", verticalAlign: "center"}}>The Rolling Stone</p>
-      </header>
+    <main style={{ scrollDirection: "horizontal"}}>
+      <div className="container" style={containerStyles}>
+        <div className="page">
+          <div style={{ alignSelf: "center", backgroundPosition: "center", backgroundImage: `url(${Nwa})`, width: "100%", height: `90vh`, backgroundSize: `contain`, position: "absolute", backgroundRepeat: "no-repeat", margin: "auto"}}></div>
+          <header style={headerStyles}>
+          <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive", verticalAlign: "center"}}>The Rolling Stone</p>
+          </header>
+        </div>
+        <div className="page">
+          <div style={{ alignSelf: "center", backgroundPosition: "center", backgroundImage: `url(${Nwa})`, width: "100%", height: `90vh`, backgroundSize: `contain`, position: "absolute", backgroundRepeat: "no-repeat", margin: "auto"}}></div>
+          <header style={headerStyles}>
+          <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive", verticalAlign: "center"}}>The Rolling Stone</p>
+          </header>
+        </div>
+        <div className="page">
+          <div style={{ alignSelf: "center", backgroundPosition: "center", backgroundImage: `url(${Nwa})`, width: "100%", height: `90vh`, backgroundSize: `contain`, position: "absolute", backgroundRepeat: "no-repeat", margin: "auto"}}></div>
+          <header style={headerStyles}>
+          <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive", verticalAlign: "center"}}>The Rolling Stone</p>
+          </header>
+        </div>
+        <div className="page">
+          <div style={{ alignSelf: "center", backgroundPosition: "center", backgroundImage: `url(${Nwa})`, width: "100%", height: `90vh`, backgroundSize: `contain`, position: "absolute", backgroundRepeat: "no-repeat", margin: "auto"}}></div>
+          <header style={headerStyles}>
+          <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive", verticalAlign: "center"}}>The Rolling Stone</p>
+          </header>
+        </div>
+
+      </div>
+
+
 
     </main>
   )
