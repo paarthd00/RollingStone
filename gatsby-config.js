@@ -4,7 +4,6 @@ module.exports = {
     title: "80s-Design",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
