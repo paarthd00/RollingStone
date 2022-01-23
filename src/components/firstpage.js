@@ -4,6 +4,7 @@ import Dre from '../images/dr.jpg'
 import Cube from '../images/ice.jpeg'
 import Mcren from '../images/mcren.jpeg'
 import Tdoc from '../images/TDOC.jpg'
+import Djy from '../images/Djy.jpeg'
 const FirstPage = () => {
     return (
         <div className="history" style={{display: "grid"}}>
@@ -29,7 +30,8 @@ const FirstPage = () => {
                 <p>
                     The album's most controversial track, "Fuck tha Police", was partly responsible for N.W.A becoming known as the "World's Most Dangerous Group". The song "Gangsta Gangsta" talks about the danger and violence in South Central and Compton. "Express Yourself" speaks of the ideas of free expression and the constraints placed on performers by radio censorship. Every N.W.A member except for DJ Yella recorded a solo song. MC Ren performs by himself on "If It Ain't Ruff" and "Quiet on tha Set". Dr. Dre, who mostly produced rather than performed, did a solo effort on the single <span style={{color:"red"}}>"Express Yourself"</span>. Ice Cube performed on "I Ain't tha 1". Eazy-E's only solo recording was a remix of the song "8 Ball", which originally appeared on the 1987 compilation album N.W.A. and the Posse. The only guest on the album is The D.O.C., who performs the opening verse on "Parental Discretion Iz Advised".
                 </p>
-            </div>
+                <img style={{float: "left", width: "250px"}}src={Djy} alt="DJ Yella"></img>
+            
             
             <h2>Commercial performance</h2>
             <p>    
@@ -37,6 +39,7 @@ const FirstPage = () => {
 
                 The album has sold over three million copies, and was certified double Platinum by the RIAA on 27 March 1992. It is N.W.A's best selling album, as their debut, N.W.A. and the Posse, was certified Gold and their final, Niggaz4Life, was certified Platinum. According to Priority Records' calculations, 80% of sales were in the suburbs, beyond the boundaries of black neighborhoods.
             </p>
+            </div>
             <h2>Critical response</h2>
             <p>
                 Upon its release, the album was generally well received by most music critics. Robert Hilburn of the Los Angeles Times wrote in a 1989 review that the album is "an anxious, unsettling documentary of an aspect of society in crisis".[1]  Jon Caramanica of Rolling Stone said that "it was a bombastic, cacophonous car ride through Los Angeles' burnt-out and ignored hoods."[2] Steve Huey of Allmusic says that although "there are several undistinguished misfires during the second half", the album "remains an essential landmark, one of hip-hop's all-time greatest."[3]

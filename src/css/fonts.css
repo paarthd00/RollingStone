@@ -9,7 +9,7 @@ body{
 .billboard{
     text-align: center;
     color: yellow;
-    font-size: 150px;
+    font-size: 120px;
     z-index: 1000;
     margin: 0;
     transform: rotate(90deg);
@@ -47,12 +47,14 @@ body{
     background-color:#111111;
     opacity: .8;
     border-radius: 2px;
+    display: flex;
+    justify-content: center;
 }
 .songnames p{
     transition: all .2s ease-in-out;
 }
 
-.songnames p:hover{
+.songnames button:hover{
     background-color: blueviolet;
     padding: 5px;
     /* border: 2.5px solid green */
@@ -73,4 +75,23 @@ img{
 p{
     color: white;
     font-family: 'Bangers', cursive;
+}
+button{
+    all: unset;
+}
+
+@media only screen and (max-width: 720px) {
+
+.billboard{
+    font-size: 50px;
+    margin: 0;
+    margin-top: -60vh;
+    transform: rotate(0deg);
+}
+.rollingstone{
+    margin: 0;
+    margin-bottom: -60vh;
+    font-size: 30px;
+    transform: rotate(0deg);
+}
 }
