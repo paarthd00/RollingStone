@@ -8,10 +8,12 @@ body{
 
 .rollingstone{
     text-align: center;
-    color: yellow;
+    color: red;
     font-size: 50px;
     z-index: 1000;
     margin: 0;
+    transform: rotate(-90deg);
+    margin-right: -60vw;
 } 
 .page{
     display: flex;
@@ -31,5 +33,14 @@ body{
 .carousel-caption{
     background-color:black;
     opacity: .8;
-    border-radius: 5px;
+    border-radius: 2px;
+}
+.songnames p{
+    transition: all .2s ease-in-out;
+}
+
+.songnames p:hover{
+    background-color: blueviolet;
+    padding: 5px;
+    /* border: 2.5px solid green */
 }

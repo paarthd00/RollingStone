@@ -4,17 +4,24 @@ import FirstPage from './firstpage'
 import SecondPage from './middlepage'
 import EndPage from './lastpage'
 import Nwa from '../images/nwa.jpg'
+import songs from '../data/songs'
+
+const songName = [
+    songs.map((e,i)=> <p style={{fontFamily:"'Nosifer', cursive"}} key={i}>{e}</p>)
+]
 
 const CarousalPage = () =>{
     return (
         <Carousel fade interval={null}>
         <Carousel.Item>
             <div className="page">
-                <img src={Nwa} style={{position: "absolute", width: "40vw"}} alt="album-cover"></img>
-            </div>
-            <Carousel.Caption>
+                <div className="songnames" style={{cursor: "pointer",position:"absolute", zIndex:10000, color: "yellow"}}>  {songName}</div>
                 <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive"}}>The Rolling Stone</p>
-            </Carousel.Caption>
+                <img src={Nwa} style={{position: "absolute", width: "55vw", opacity:.7}} alt="album-cover"></img>
+            
+            </div>
+            {/* <Carousel.Caption> */}
+            {/* </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
             <FirstPage />   
