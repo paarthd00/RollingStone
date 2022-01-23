@@ -60,8 +60,8 @@ const CarousalPage = () =>{
                 <img src={Nwa} style={{position: "absolute", width: "55vw", opacity:.7}} alt="album-cover"></img>
             </div>
             <Carousel.Caption>
-            <p style={{margin: "5px"}}> Selected Song :: {currentSong}</p>
-            <button onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? "Play" : 'Stop'}
+            <p style={{margin: "10px", fontSize:"18px"}}> Selected Song :: {currentSong}</p>
+            <button style={{fontSize: "22px", borderRadius: "2%", background:"purple", padding:"2px"}} onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? "Play" : 'Stop'}
 
             <Sound
                 url={data[index]}

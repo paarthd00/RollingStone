@@ -9,23 +9,23 @@ body{
 .billboard{
     text-align: center;
     color: yellow;
-    font-size: 120px;
+    font-size: 50px;
     z-index: 1000;
     margin: 0;
     transform: rotate(90deg);
     margin-left: -60vw;
-    position: fixed;
+    position: absolute;
  
 }
 .rollingstone{
     text-align: center;
     color: red;
-    font-size: 50px;
+    font-size: 30px;
     z-index: 1000;
     margin: 0;
     transform: rotate(-90deg);
     margin-right: -60vw;
-    position: fixed;
+    position: absolute;
 } 
 
 .page{
