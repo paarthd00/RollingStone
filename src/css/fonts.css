@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
-/* * {
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');/* * {
     margin: 0
 } */
 body{
-    background-color: black;
+    background-color: #111111;
 }
-
+.billboard{
+    text-align: center;
+    color: yellow;
+    font-size: 150px;
+    z-index: 1000;
+    margin: 0;
+    transform: rotate(90deg);
+    margin-left: -60vw;
+    position: fixed;
+ 
+}
 .rollingstone{
     text-align: center;
     color: red;
@@ -14,24 +25,26 @@ body{
     margin: 0;
     transform: rotate(-90deg);
     margin-right: -60vw;
+    position: fixed;
 } 
+
 .page{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 }
 .active.carousel-item{
     height: 100%;
 }
-.carousel{
+/* .carousel{
     height: 100vh;
-}
+} */
 .carousel-inner{
     height: 100%;
 }
 .carousel-caption{
-    background-color:black;
+    background-color:#111111;
     opacity: .8;
     border-radius: 2px;
 }
@@ -43,4 +56,21 @@ body{
     background-color: blueviolet;
     padding: 5px;
     /* border: 2.5px solid green */
+}
+
+h1,h2,h3{
+    color: whitesmoke;
+    font-family: 'Bangers', cursive;
+}
+
+img{
+    padding: 15px;
+}
+
+.history{
+    padding: 15px;
+}
+p{
+    color: white;
+    font-family: 'Bangers', cursive;
 }
