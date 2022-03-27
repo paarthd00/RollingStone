@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');/* * {
-    margin: 0
-} */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Space+Mono&display=swap');
 body{
     background-color: #111111;
 }
@@ -14,7 +12,7 @@ body{
     margin: 0;
     transform: rotate(90deg);
     margin-left: -60vw;
-    position: absolute;
+    position: fixed;
  
 }
 .rollingstone{
@@ -25,7 +23,7 @@ body{
     margin: 0;
     transform: rotate(-90deg);
     margin-right: -60vw;
-    position: absolute;
+    position: fixed;
 } 
 
 .page{
@@ -62,7 +60,7 @@ body{
 
 h1,h2,h3{
     color: whitesmoke;
-    font-family: 'Bangers', cursive;
+    font-family: 'Space Mono', monospace;
 }
 
 img{
@@ -74,7 +72,7 @@ img{
 }
 p{
     color: white;
-    font-family: 'Bangers', cursive;
+    font-family: 'Space Mono', monospace;
 }
 button{
     all: unset;
@@ -94,4 +92,18 @@ button{
     font-size: 30px;
     transform: rotate(0deg);
 }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .billboard{
+        font-size: 50px;
+        margin: 0;
+        margin-top: -60vh;
+        transform: rotate(0deg);
+    }
+    .rollingstone{
+        margin: 0;
+        margin-bottom: -60vh;
+        font-size: 30px;
+        transform: rotate(0deg);
+    }
 }
