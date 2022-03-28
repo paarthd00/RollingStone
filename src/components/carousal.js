@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import FirstPage from './firstpage'
-// import SecondPage from './middlepage'
-import EndPage from './lastpage'
+import SecondPage from './middlepage'
+// import EndPage from './lastpage'
 import Nwa from '../images/nwa.jpg'
 import songs from '../data/songs'
 import Sound from 'react-sound'
@@ -74,17 +74,23 @@ const CarousalPage = () =>{
         </Carousel.Item>
         <Carousel.Item>
 
+            <SecondPage song={index} />   
+
+        </Carousel.Item>
+        <Carousel.Item>
+
             <FirstPage />   
             
         </Carousel.Item>
 
-        <Carousel.Item>
+
+        {/* <Carousel.Item>
             <EndPage />
             <Carousel.Caption>
                 <h3>Third slide label</h3>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
         </Carousel>
     )
 }

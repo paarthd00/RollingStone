@@ -1,9 +1,14 @@
 import React from 'react'
+import lyrics from '../data/lyrics'
 
-const SecondPage = () => {
+const SecondPage = ({song}) => {
+    
+    const l = lyrics[song]
+
     return (
-        <div>
-            <h1>Page2</h1>
+        <div style={{padding: "15px"}}>
+            <h1>Lyrics</h1>
+            <p>{l}</p>
         </div>
     )
 }
