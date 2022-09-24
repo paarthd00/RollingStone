@@ -1,8 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import FirstPage from './firstpage'
-import SecondPage from './middlepage'
-// import EndPage from './lastpage'
+import HistoryPage from './history'
+import LyricsPage from './lyrics'
 import Nwa from '../images/nwa.jpg'
 import songs from '../data/songs'
 import Sound from 'react-sound'
@@ -19,7 +18,7 @@ import Iat from '../data/Iat.mp3'
 import Dm from '../data/Dm.mp3'
 import Qots from '../data/Qots.mp3'
 import Stdt from '../data/Stdt.mp3'
-const CarousalPage = () =>{
+const CarousalPage = () => {
     const data = [
         Soc,
         Ftp,
@@ -35,62 +34,54 @@ const CarousalPage = () =>{
         Qots,
         Stdt,
     ]
-    
+
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentSong, setCurrentSong] = useState("StarightOuttaCompton");
     const [index, setIndex] = useState(0);
-    const setSong = (e,i) =>{
-        setCurrentSong(e);setIndex(i)
+    // sets the state of current song and index
+    const setSong = (e, i) => {
+        setCurrentSong(e); setIndex(i)
     }
+    // songName is an array of playable songs
     const songName = [
-        songs.map((e,i)=> <div key={i}>            
-        <button key={i+100} onClick={() => setSong(e,i)}>{e}
-        </button>
+        songs.map((e, i) => <div key={i}>
+            <button key={i + 100} onClick={() => setSong(e, i)}>{e}
+            </button>
         </div>
         )
     ]
-    // const [currentSong, setCurrentSong] = useState("");
     return (
         <Carousel fade interval={null}>
-        <Carousel.Item>
-            <div className="page">
-                <p className="billboard" style={{fontFamily: "'Space Mono', monospace"}}>#1 Billboard!</p>
-                <div className="songnames" style={{cursor: "pointer",position:"absolute", zIndex:10000, color: "yellow"}}>  {songName}</div>
-                <p className="rollingstone" style={{fontFamily:"'Nosifer', cursive"}}>The Rolling Stone</p>
-                <img src={Nwa} style={{position: "absolute", width: "55vw", opacity:.7}} alt="album-cover"></img>
-            </div>
-            <Carousel.Caption>
-            <p style={{margin: "10px", fontSize:"18px"}}> Selected Song :: {currentSong}</p>
-            <button style={{fontSize: "22px", borderRadius: "2%", background:"purple", padding:"2px"}} onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? "Play" : 'Stop'}
+            <Carousel.Item>
+                <div className="page">
+                    <p className="billboard" style={{ fontFamily: "'Space Mono', monospace" }}>#1 Billboard!</p>
+                    <div className="songNames" style={{ cursor: "pointer", position: "absolute", zIndex: 10000, color: "yellow" }}>  {songName}</div>
+                    <p className="rollingStone" style={{ fontFamily: "'Nosifer', cursive" }}>The Rolling Stone</p>
+                    <img src={Nwa} style={{ position: "absolute", width: "55vw", opacity: .7 }} alt="album-cover"></img>
+                </div>
+                <Carousel.Caption>
+                    <p style={{ margin: "10px", fontSize: "18px" }}> Selected Song :: {currentSong}</p>
+                    <button style={{ fontSize: "22px", borderRadius: "2%", background: "purple", padding: "2px" }} onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? "Play" : 'Stop'}
+                        {/* plays the sound if the is playing then set status playing else Sound.status.STOPPED  */}
+                        <Sound
+                            url={data[index]}
+                            playStatus={
+                                isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED
+                            }
+                        />
+                    </button>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
 
-            <Sound
-                url={data[index]}
-                playStatus={
-                    isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED
-                }
-            />
-            </button>
-            </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
+                <LyricsPage song={index} />
 
-            <SecondPage song={index} />   
+            </Carousel.Item>
+            <Carousel.Item>
 
-        </Carousel.Item>
-        <Carousel.Item>
+                <HistoryPage />
 
-            <FirstPage />   
-            
-        </Carousel.Item>
-
-
-        {/* <Carousel.Item>
-            <EndPage />
-            <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-        </Carousel.Item> */}
+            </Carousel.Item>
         </Carousel>
     )
 }
